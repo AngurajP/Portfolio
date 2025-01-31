@@ -1,0 +1,739 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: 0.3s;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: #171918;
+    color: white;
+    overflow-x: hidden;
+}
+/* navbar */
+#navbar{
+    font-size: 20px;
+    box-shadow: 0px 0px 10px 4px #7fff00;
+    position: sticky;
+    top: 0px;
+    width: 100%;
+    z-index: 4;
+}
+/* home navbars using */
+.leFadeInTop span { animation-name: leFadeInTop; animation-timing-function: ease-in;}
+@keyframes leFadeInTop {
+    from {
+        opacity: 0;
+        transform: translateY(-100%);
+    }
+    to { opacity: 1 }
+}
+#navbar-brand{
+    background: transparent;
+    border: 0;
+    outline: 0;
+    font-weight: bold;
+}
+#navitem{
+    font-weight: bold;
+    color:#fff;
+    position: relative;
+}
+li a::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-color: #ffff00;
+    border-radius: 60px;
+    scale: 0 0;
+    transition: 0.3s;
+}
+#navitem:hover{
+    color: #000;
+}
+li a:hover::after{
+    scale: 1 0.6;
+}
+/* home page */
+#home_Page{
+    padding: 20px;
+    background-color:#1a2a3a;
+}
+@media only screen and (max-width:575px) {
+    #home_Page{
+        height: 100%;
+    }
+}
+@media only screen and (max-width:575px) {
+    #homeContent{
+        margin-left: 40px;
+    }
+    #hire_me_btn{
+        margin-left: 40px;
+    }
+}
+#homeContent h1{
+    color: #fff;
+}
+#homeContent h2{
+    color: #ffff00;
+    transition:all 0.5s;
+}
+#home_content_page{
+    margin-top: 40px;
+}
+#homeImg{
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+    animation-name: fadeInLeft;
+    transition: left 0.5s;
+    animation-duration: 1.5s;
+    animation-timing-function: linear;
+}
+@keyframes fadeInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(100%);
+    }
+    to { opacity: 1 }
+}
+#profile-img{
+    width: 50%;
+    cursor: pointer;
+}
+.homebtn{
+    display: flex;
+}
+#cvbtn{
+    width: 135px;
+    padding: 5px;
+    background-color: #000;
+    border: 0;
+    outline: 0;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    color:#fff;
+    text-align: center;
+    transition: all 0.3s linear;
+    border: 3px solid #27d63e;
+    position: relative;
+    z-index: 2;
+}
+#cvbtn:hover{
+    color: #fff;
+}
+.cvbtn a::after{
+    content: "";
+    position: absolute;
+    z-index: -1;
+    inset: 0;
+    background-color: red;
+    color: #fff;
+    border-radius: 50px;
+    scale: 0 0;
+    transition: 0.3s;
+}
+.cvbtn a:hover::after{
+    scale: 1 1;
+}
+@media only screen and (max-width:640px) {
+    .homebtn{
+        display: block;
+    }  
+}
+@media only screen and (max-width:575px) {
+    #cvbtn{
+        margin-left: 45px;
+    }  
+}
+#hire_me_btn{
+    width: 150px;
+    padding: 5px;
+    background-color: #3bd09e;
+    border: 0;
+    outline: 0;
+    border-radius: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    color:#ffffff;
+    text-align: center;
+    transition: all 0.3s linear;
+    border: 3px solid #27d63e;
+}
+#hire_me_btn:hover{
+    background-color: #ffff00;
+    color: black;
+    font-weight:500 ;
+    border: 3px solid #ffffff;
+}
+#loading-gif{
+    width: 23px;
+    height:23px;
+    border-radius: 100%;
+    animation: troll 1s linear infinite;
+    border-bottom: 3px solid #000000;
+    border-top: 3px solid #ff0000;
+    border-left: 3px solid #0000ff;
+    border-right: 3px solid #d627d6;
+}
+@keyframes troll {
+    0% {
+        transform: rotate(360deg);
+    }
+}
+#full_stack{
+    color: #27d63e;
+    width: 23ch;
+    border-right: 3px solid red;
+    overflow: hidden;
+    animation: typing 8s steps(23) infinite, blink 0.4s step-end infinite;
+}
+@keyframes typing {
+    from{
+        width: 1ch;
+    }
+}
+@keyframes blink {
+    50%{
+        border-color: transparent;
+    }
+}
+/* about-page */
+
+.about-heading{
+    display: flex;
+    justify-content: center;
+}
+#about_title{
+    border-bottom: 3px solid #0000ff;
+    color: red;
+    text-align: center;
+}
+#about_row{
+    display: inline;
+}
+#about_page{
+    background-color: #ffff007a;
+    height: 100%;
+}
+#about-gif{
+    width: 250px;
+    cursor: pointer;
+}
+@media screen and (min-width:700px) {
+    #about-gif{
+        width: 400px;
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width:575px) {
+    #about_page{
+        background-color: #dcdcdc;
+    }    
+}
+
+#about_card{
+    cursor: pointer;
+    box-shadow: 0px 0px 10px 4px hotpink;
+}
+
+.logos{
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+/* about page end */
+
+/* skills page */
+#skills_page{
+    background-color:#A0D683;
+    height: 100%;
+}
+#skills_heading{
+    display: flex;
+    justify-content: center;
+}
+#skills_title{
+    color: #f51313;
+    border-bottom: 3px solid #0000ff;
+    text-align: center;
+} 
+#htmlcol{
+    width: 310px;
+    height: 250px;
+    background-color: #D3EE98;
+    margin-left: 20px;
+    margin-bottom: 25px;
+    position: relative;
+    border-radius: 50px;
+}
+#htmlpara{
+    width: 310px;
+    height: 250px;
+    position: absolute;
+    top: 130px;
+    color: #fff;
+    opacity: 0;
+    transition: all 0.5s linear;
+    background-color: #D91656;
+    border-radius: 50px;  
+    cursor: pointer;
+}
+#htmlpara #defintion{
+    padding:13px;
+    font-size: 15px;
+}
+#htmlpara h3{
+    text-align: center;
+}
+#htmlcol:hover >#htmlpara{
+    position: absolute;
+    top: 0px;
+    opacity: 1;
+    margin-left: -12px;
+}
+#htmlcol:hover >#skillhtmlimg{
+    opacity: 0;
+}
+#htmlcol:hover >#skillcssimg{
+    opacity: 0;
+}
+#skillhtmlimg{
+    width: 200px;
+    margin-top: 10%;
+    margin-left: 15%;
+    opacity: 1;
+}
+#skillcssimg{
+    width: 140px;
+    margin-top: 10%;
+    margin-left: 25%;
+}
+#skillexpressimg{
+    width: 300px;
+    margin-top: 10%;
+    margin-left: 10%;
+}
+/* skill page end */
+
+/* project page */
+#project_page{
+    height: 100%;
+    background-color: #fff
+}
+#project_heading{
+    display: flex;
+    justify-content: center;
+}
+#project_heading h2{
+    margin-top: 10px;
+    color: #f61111;
+    border-bottom: 3px solid #0000ff;
+}
+#task-col1{
+    display: flex;
+    justify-content: center;
+}
+#task-col1 .card{
+    height: 90%;
+    width: 60%;
+    margin-top: 30px;
+}
+#task-col1 .card{
+    box-shadow: 0px 0px 10px 2px rgb(99, 92, 92);
+}
+#shopimg{
+    margin-top: 15px;
+    margin-left: 23px;
+    margin-bottom: 15px;
+    height: 200px;
+    width: 80%;
+    border-radius: 5px;
+}
+#task1:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task-col1 #projectname{
+    transition:0.5s linear;
+    background-color: #000000;
+    color: #fff;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col1 > #task1{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* task 2 */
+#ballimg{
+    margin-top: 15px;
+    margin-left: 23px;
+    margin-bottom: 15px;
+    width: 80%;
+    height: 200px;
+    border-radius: 5px;
+}
+#task-col2{
+    display: flex;
+    justify-content: center;
+}
+#task-col2 .card{
+    height: 90%;
+    width: 60%;
+    margin-top: 30px;
+}
+#task-col2 .card{
+    box-shadow: 0px 0px 10px 2px rgb(99, 92, 92);
+}
+#task2:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task-col2 #projectname{
+    transition:0.5s linear;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col2 > #task2{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* task 3 */
+#task-col3{
+    display: flex;
+    justify-content: center;
+}
+#task-col3 .card{
+    height: 90%;
+    width: 60%;
+    margin-top: 30px;
+}
+#task-col3 .card{
+    box-shadow: 0px 0px 10px 2px rgb(99, 92, 92);
+}
+#task3:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task-col3 #projectname{
+    background-color: rgb(234, 30, 91);
+    color: #fff;
+    text-align: center;
+    transition:0.5s linear;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col3 > #task3{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* task 4 */
+#task4:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task4 #projectname{
+    background-color: rgb(238, 31, 31);
+    color: aliceblue;
+    text-align: center;
+    transition:0.5s linear;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col1 > #task4{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0.5; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* task 5 */
+#task5:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task5 #projectname{
+    background-color:#9533bc;
+    color: aliceblue;
+    text-align: center;
+    transition:0.5s linear;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col2 > #task5{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0.5; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* task 6 */
+#task6:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task6 #projectname{
+    background-color:rgb(49, 137, 136);
+    color: aliceblue;
+    text-align: center;
+    transition:0.5s linear;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col3 > #task6{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0.5; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* task 7 */
+#task7:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task7 #projectname{
+    background-color: blue;
+    color: aliceblue;
+    text-align: center;
+    transition:0.5s linear;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col1 > #task7{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0.5; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* task 8 */
+#task8:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task8 #projectname{
+    background-color:grey;
+    color: aliceblue;
+    text-align: center;
+    transition:0.5s linear;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col2 > #task8{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0.5; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* task 9 */
+#task9:hover #projectname{
+    position: absolute;
+    top:100px;
+    opacity: 1;
+}
+#task9 #projectname{
+    background-color:goldenrod;
+    color: aliceblue;
+    text-align: center;
+    transition:0.5s linear;
+    font-size: 20px;
+    font-weight: bold;
+    text-align:center;
+    opacity: 0;
+    position: absolute;
+    top:200px;
+    width: 100%;
+    height: 15%;
+    text-decoration: none;
+}
+#task-col3 > #task9{
+    transition: all 0.5s;
+    animation: fade linear;
+    animation-timeline: view();
+    animation-range:0% 45%;
+}
+@keyframes fade {
+    from{scale: 0.5; opacity: 0;}
+    to{scale: 1;opacity: 1;}
+}
+/* contact page */
+#hrline{
+    color: rgb(15, 14, 14);
+}
+#contact_page{
+    height: 100%;
+    background-color: #000000;
+}
+.heading #contitle{
+    text-align: center;
+    color: #f61111;
+    margin: 20px 0px;
+}
+#contact_row{
+    display: flex;
+    justify-content:center;
+}
+.footerdescription ul li{
+    list-style-type:none;
+}
+.footerdescription{
+    text-align: center;
+    color: #ffff00;
+}
+#footercol2 h4{
+    color: #fff;
+    text-align: center;
+}
+#footercol3 h3{
+    color: #FFAD60;
+    text-align: center;
+}
+.footerdescription p{
+    font-size: 18px;
+}
+.footerdescription li a{
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    color: #ffff00;
+}
+.footerdescription li a:hover{
+    color:red;
+}
+#description{
+    text-align: center;
+}
+#phnImg{
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+#emailImg{
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+    margin-right: 5px;
+}
+#footeremail{
+    margin-left: 65px;
+}
+#locationImg{
+    width: 28px;
+    height: 28px;
+    cursor: pointer;
+    margin-top: 3px;
+    margin-left: 5px;
+}
+#copyright{
+    text-align: center;
+    color: #F94C10;
+}
